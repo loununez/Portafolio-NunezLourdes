@@ -25,7 +25,7 @@ Este portfolio es una aplicación web responsive para:
 - Menú hamburguesa responsive
 - Tarjetas de proyectos interactivas
 - Formulario de contacto
-- Diseño moderno con efecto glassmorphism
+- Diseño con efecto glassmorphism
 - Adaptable a móviles y tablets
 
 ## Cómo Ver el proyecto
