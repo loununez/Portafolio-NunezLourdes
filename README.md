@@ -30,5 +30,5 @@ Este portfolio es una aplicación web responsive para:
 
 ## Cómo Ver el proyecto
 
-El portfolio está desplegado en el siguiente link: 
+El portfolio está desplegado en el siguiente link: https://loununez.github.io/Portafolio-NunezLourdes/
 Tambien, clonar el repositorio y abrir el archivo `index.html` en tu navegador
