@@ -1,0 +1,819 @@
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(to right, #f8f3ff, #ece6ff);
+    color: #333;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/*seccion nav*/
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8a4bff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8a4bff;
+}
+
+
+/* Sección menú hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+
+.hamburger {
+    display: none; 
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger-inner::before {
+    top: -8px;
+}
+
+.hamburger-inner::after {
+    bottom: -8px;
+}
+
+
+.menu-toggle:checked + .hamburger .hamburger-inner {
+    background-color: transparent;
+}
+
+.menu-toggle:checked + .hamburger .hamburger-inner::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked + .hamburger .hamburger-inner::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+
+  
+/* Seccion Inicio */
+.inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        position: relative;
+    }
+
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.highlight {
+    color: #8a4bff;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Botones seccion inicio */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #8a4bff;
+    color: white;
+}
+
+.primary:hover {
+    background: #6b32d1;
+}
+
+.secondary {
+    background: white;
+    color: #333;
+    border: 2px solid #ccc;
+    margin-left: 10px;
+}
+
+.secondary:hover {
+    background: #f1f1f1;
+}
+
+/* Flechita */
+.arrow-down {
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #a259ff;
+    border-bottom: 4px solid #a259ff;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(-45deg);
+    }
+  }
+  
+
+
+/* seccion sobre mi*/
+.sobremi {
+    min-height: 50vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: purple;
+}
+
+.card {
+    margin: auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    text-align: left;
+}
+
+
+/*seccion habilidades*/
+.habilidades {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+.habilidades h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #8a4bff;
+}
+
+/* Contenedor de las tarjetas habilidades */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; /
+}
+
+/* Estilo de las tarjetas */
+.skill-card {
+    width: calc(40% - 20px); 
+    min-width: 300px; 
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de cada tarjeta */
+.card-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width:45%; 
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #8a4bff;
+}
+
+/* Estilos de la lista de habilidades */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+}
+
+/* habilidad individual */
+.skills-list span {
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border-radius: 12px; 
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*seccion proyectos*/
+.proyectos {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.proyectos h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #8a4bff;
+}
+
+/*Contenedor de proyectos */
+.proyectos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Tarjeta de cada proyecto */
+.proyectos-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+/*Imagen dentro de la tarjeta */
+.proyectos-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.5s ease;
+}
+
+.proyectos-card:hover img {
+    transform: scale(1.1); 
+}
+
+/* Contenido de la tarjeta */
+.proyectos-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.proyectos-content h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.proyectos-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Tags tecnologías */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Estilo de los tags */
+.tags span {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo de los botones */
+.proyectos-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.proyectos-links a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyectos-links a:hover {
+    background: #8a4bff;
+    color: white;
+}
+
+.proyectos-links a span {
+    font-size: 1.2rem;
+}
+
+
+/* Enlaces de los proyectos */
+.proyectos-links {
+    display: flex;
+    gap: 15px;
+}
+
+.proyectos-links a {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.proyectos-links a:hover {
+    background: #8a4bff;
+    color: white;
+}
+
+/* Sección contacto */
+.contacto {
+    text-align: center;
+    padding: 60px 20px;
+    background: transparent;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #8a4bff;
+}
+
+/* Contenedor principal */
+.contacto-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    max-width: 1000px;
+    margin: auto;
+    align-items: flex-start;
+    padding: 35px;
+    border-radius: 25px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tarjetas de información y formulario */
+.contacto-info, .contacto-form {
+    text-align: left;
+}
+
+/* Información de contacto */
+.contacto-info h3, .contacto-form h3 {
+    font-size: 1.5rem;
+    margin-top: 35px;
+}
+
+.contacto-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contacto-info i {
+    color: #8a4bff;
+    margin-right: 10px;
+}
+
+/* Enlaces */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #8a4bff;
+    color: white;
+}
+
+.social-links a:hover i {
+    color: white;
+}
+
+
+/* Formulario */
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: #f7f7f7;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    outline: none;
+    transition: border-color 0.3s ease; 
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #8a4bff;
+}
+.contacto-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Botón */
+.send-btn {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #a366ff;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.send-btn:hover {
+    background: #7c3aed;
+}
+
+
+
+@media (max-width: 1080px) {
+    header {
+        padding: 15px 30px;
+    }
+    
+    .glass-card {
+        padding: 30px;
+        max-width: 500px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .card {
+        flex-direction: column;
+        padding: 25px;
+    }
+    
+    .text-content {
+        margin-top: 20px;
+    }
+    
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-card {
+        width: 80%;
+    }
+    
+    .proyectos-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet vertical (768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .menu-toggle:checked ~ .nav-menu {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .glass-card {
+        padding: 25px;
+        max-width: 90%;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .secondary {
+        margin-left: 0;
+    }
+    
+    .card-header {
+        width: 100%;
+    }
+    
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .proyectos-links {
+        flex-direction: column;
+    }
+}
+
+/* Mobil 1 (480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .glass-card {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .sobremi h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .skill-card {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .proyectos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-container {
+        padding: 20px;
+    }
+    
+    .contacto-info h3, .contacto-form h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobil 2 (375px) */
+@media (max-width: 375px) {
+    header {
+        padding: 8px 10px;
+    }
+    
+    .glass-card {
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+    
+    .sobremi h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .proyectos-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .tags span {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .contacto-form input,
+    .contacto-form textarea {
+        padding: 10px;
+    }
+    
+    .send-btn {
+        padding: 12px 20px;
+    }
+}
